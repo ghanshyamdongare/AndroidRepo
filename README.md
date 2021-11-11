@@ -1,7 +1,7 @@
 # SampleApp
 ================================
 ## About
-This app is to browse Albums and lets you check all Albums sorted by titles alphabetically.
+This app is to browse Albums and lets you check all Albums list sorted by titles alphabetically.
 
 ## Architecture
 
@@ -19,15 +19,22 @@ App also Used libraries & Components Kotlin as the main language for development
 8. Navigation Architecture Component/Navigation Host,
 9. Navigation Graph,
 10. NavigationController;
-11. DiffUtil,
-12. ListAdapter & RecyclerView
-13. Mockito,
-14. Kotlin coroutines test,
-15. Google truth library for assertion Junit for testing;
-16. Single Activity Architecture
+11. ListAdapter & RecyclerView
+12. Mockito,
+13. Kotlin coroutines test,
+14. Google truth library for assertion Junit for testing;
+15. Single Activity Architecture
 
 ## The app has following packages:
 1. **data**: It contains all the data accessing and manipulating components.
 2. **di**: Dependency providing classes using DaggerHilt.
 3. **ui**: View classes along with their corresponding ViewModel.
 4. **utils**: Utility classes.
+
+## Description
+This app used MVVM pattern, Retrofit to make an API call and saved the data into local db using Room.  
+It updates the DB after the successful API call and fetch the data from local db in case of no network error. 
+Dagger HILT is used for dependency injection, Single Activity Architecture, Navigation host, Binding to show the data in list.
+AppModule is used to create single instance in the life cycle of application of Room and Retrofit.
+
+
